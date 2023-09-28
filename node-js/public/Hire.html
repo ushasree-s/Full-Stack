@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Hire.css">
+    <title>Hiring</title>
+</head>
+<body>
+    <div class="card-list">
+        <a href="#" class="card-item">
+            <img src="image1.jpg" alt="Card Image">
+            <span class="John">John</span>
+            <h3>Experience: 2 years</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+            <button class="hire-button"  onclick="addToCart(this)">Hire Now</button>
+        </a>
+        <a href="#" class="card-item">
+            <img src="image2.jpg" alt="Card Image">
+            <span class="Satyam">Satyam</span>
+            <h3>Experience: 5 years</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+            <button class="hire-button"  onclick="addToCart(this)">Hire Now</button>
+        </a>
+        <a href="#" class="card-item">
+            <img src="image3.jpg" alt="Card Image">
+            <span class="Rishi">Rishi</span>
+            <h3>Experience: 4 years</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+            <button class="hire-button"  onclick="addToCart(this)">Hire Now</button>
+        </a>
+    </div>
+    <div id="cart">
+        <h3>Hiring Process:<br>Select the photographer:</h3>
+        <ul id="cart-items">
+            
+        </ul>
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        function addToCart(button) {
+            const cardItem = button.parentElement;
+            const cardNameElement = cardItem.querySelector('span'); 
+            const cardName = cardNameElement.textContent;
+            const cartItems = document.getElementById("cart-items");
+
+            const listItem = document.createElement("li");
+            listItem.textContent = cardName;
+            cartItems.appendChild(listItem);
+
+    
+            const message = document.getElementById("message");
+            message.textContent = `${cardName} added for Hiring process`;
+            message.style.display = "block";
+
+
+            setTimeout(() => {
+                message.style.display = "none";
+            }, 3000);
+        }
+    </script>
+      
+</body>
+</html>
+    

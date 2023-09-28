@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(236, 170, 46);
+    height: 80px;
+    width: 100%;
+    font-weight: fixed;
+    font-family: cursive;
+    color: rgb(118, 130, 140);
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background-color: rgba(69, 69, 69, 0.548);
+    transition: .5s;
+}
+.checkbtn{
+    color: white;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width:950px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:850px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        width: 100%;
+        position: fixed;
+        height: 100vh;
+        background-color: rgb(128, 245, 251);
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: rgb(142, 192, 56);
+    }
+    a.active,a:hover{
+        background: none;
+        color: darkgreen;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+section{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   background-color: antiquewhite;;
+   height: 750px;
+}
+.container{
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+.left{
+    width: 52%;
+    height: 600px;
+    background: url("d3.jpg") no-repeat center / cover;
+    /*background-image: linear-gradient(to bottom right,rgb(126, 117, 34),rgb(189, 187, 66));*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+}
+.right{
+    width: 55%;
+    min-height: 460px;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: -100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+}
+.right h1{
+    font-size: 29px;
+    font-weight: lighter;
+}
+.right p{
+    margin: 20px 0;
+    font-weight: 300;
+    line-height: 25px;
+    font-size: 20px;
+}
+.right a{
+    text-transform: uppercase;
+    background-color: rgb(226, 201, 163);
+    padding: 10px 20px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
